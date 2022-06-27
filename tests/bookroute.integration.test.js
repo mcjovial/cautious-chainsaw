@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('supertest');
-const bookRoute = require('../routes/books.route');
+const bookRoute = require('../routes/book.route');
 const app = express();
 
 app.use(express.json());
