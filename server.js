@@ -1,3 +1,9 @@
-const app = require('./app.js')
+const makeApp = require('./app.js')
+const mongoose = require('./database');
+const { port } = require('./vars.js');
+const app = makeApp()
 
-app.listen(8080, () => console.log("listening on port 8080"))
+// open mongoose connection
+mongoose.connect();
+
+app.listen(port, () => console.log(`listening on port ${port}`))
